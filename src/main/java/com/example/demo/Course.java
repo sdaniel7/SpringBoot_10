@@ -23,6 +23,11 @@ public class Course {
     private String instructor;
 
     @NotNull
+    @Size(min=10)
+    private String description;
+
+
+    @NotNull
     @Min(3)
     private int credit;
 
@@ -56,5 +61,13 @@ public class Course {
 
     public void setCredit(int credit) {
         this.credit = credit;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 }

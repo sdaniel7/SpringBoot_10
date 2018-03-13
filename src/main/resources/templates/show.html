@@ -7,9 +7,15 @@
 
 <body>
 
-<a href="/">Show All Courses</a><br />
+    <a href="/">Show All Courses</a><br />
 
-Title :<span th:
+    Title :<span th:text="${course.title}"></span> <br />
+    Instructor :<span th:text="${course.instructor}" ></span> <br />
+    Description: <span th:text="${course.description}" ></span> <br />
+    Credits :<span th:text="${course.credit}" ></span> <br />
+
+    <a th:href="@{/delete/{id} (id=${course.id})}">Delete this course</a>
+
 
 </body>
 
